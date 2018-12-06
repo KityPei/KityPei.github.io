@@ -249,6 +249,351 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/06/iOS-权限设置/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kity Pei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="艾泽拉斯">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/06/iOS-权限设置/" itemprop="url">iOS 权限设置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-06T22:14:19+08:00">
+                2018-12-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.2k 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <table>
+<thead>
+<tr>
+<th>版本</th>
+<th>时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V1.0</td>
+<td>2018.12.6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>iOS 10以后，苹果增强了对用户隐私的保护，访问照相机、相册、麦克风、定位、通讯录等，都需要在info.plist 文件中添加权限，而且少一个都不行。根据需要添加，项目中使用了什么，就添加对应的权限。</p>
+</blockquote>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="info-plist中的相关配置说明"><a href="#info-plist中的相关配置说明" class="headerlink" title="info.plist中的相关配置说明"></a>info.plist中的相关配置说明</h3><table>
+<thead>
+<tr>
+<th>字段</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Privacy - Photo Library Usage Description</td>
+<td>相册使用权限</td>
+</tr>
+<tr>
+<td>Privacy - Photo Library Additions Usage Description</td>
+<td>编辑相册权限</td>
+</tr>
+<tr>
+<td>Privacy - Camera Usage Description</td>
+<td>相机权限</td>
+</tr>
+<tr>
+<td>Privacy - Contacts Usage Description</td>
+<td>通讯录权限</td>
+</tr>
+<tr>
+<td>Privacy - Microphone Usage Description</td>
+<td>麦克风权限</td>
+</tr>
+<tr>
+<td>Privacy - Bluetooth Peripheral Usage Description</td>
+<td>蓝牙权限</td>
+</tr>
+<tr>
+<td>Privacy - Location Always Usage Description</td>
+<td>定位权限</td>
+</tr>
+<tr>
+<td>Privacy - Location Usage Description</td>
+<td>定位权限</td>
+</tr>
+<tr>
+<td>Privacy - Location When In Use Usage Description</td>
+<td>定位权限</td>
+</tr>
+<tr>
+<td>Privacy - Location Always and When In Use Usage Description</td>
+<td>定位权限</td>
+</tr>
+<tr>
+<td>Privacy - Media Library Usage Description</td>
+<td>媒体库权限</td>
+</tr>
+<tr>
+<td>Privacy - Calendars Usage Description</td>
+<td>日历权限</td>
+</tr>
+<tr>
+<td>Privacy - Reminders Usage Description</td>
+<td>提醒事项权限</td>
+</tr>
+<tr>
+<td>Privacy - Face ID Usage Description</td>
+<td>FaceID权限</td>
+</tr>
+<tr>
+<td>Privacy - Health Records Usage Description</td>
+<td>健康记录权限</td>
+</tr>
+<tr>
+<td>Privacy - Health Share Usage Description</td>
+<td>健康分享权限</td>
+</tr>
+<tr>
+<td>Privacy - Health Update Usage Description</td>
+<td>健康更新权限</td>
+</tr>
+<tr>
+<td>Privacy - Motion Usage Description</td>
+<td>运动权限</td>
+</tr>
+<tr>
+<td>Privacy - Music Usage Description</td>
+<td>音乐权限</td>
+</tr>
+<tr>
+<td>Privacy - NFC Scan Usage Description</td>
+<td>NFC权限</td>
+</tr>
+<tr>
+<td>Privacy - Siri Usage Description</td>
+<td>Siri权限</td>
+</tr>
+<tr>
+<td>Privacy - Speech Recognition Usage Description</td>
+<td>语音识别权限</td>
+</tr>
+<tr>
+<td>Privacy - HomeKit Usage Description</td>
+<td>智能家具权限</td>
+</tr>
+<tr>
+<td>Privacy - TV Provider Usage Description</td>
+<td>电视供应商权限</td>
+</tr>
+<tr>
+<td>Privacy - Video Subscriber Account Usage Description</td>
+<td>视频用户账号使用权限</td>
+</tr>
+</tbody>
+</table>
+<p><strong>可根据需要在info.plist中添加以上key值，但是描述一定要清楚明白，否则苹果审核可能会不通过</strong></p>
+<p><strong>可根据需要在info.plist中添加以上key值，但是描述一定要清楚明白，否则苹果审核可能会不通过</strong></p>
+<p><strong>可根据需要在info.plist中添加以上key值，但是描述一定要清楚明白，否则苹果审核可能会不通过</strong></p>
+<h2 id="权限请求以及简要说明"><a href="#权限请求以及简要说明" class="headerlink" title="权限请求以及简要说明"></a>权限请求以及简要说明</h2><p>在info.plist中配置了，并不代表就完全不需要developer去自己请求权限，只有极少部分权限系统在进入的时候会帮助developer向用户发起请求，例如：网络权限，通知权限等。</p>
+<p>绝大部分权限请求状态可以分为以下4种情况:</p>
+<ul>
+<li><code>notDetermined</code> 表示未发起对当前权限的请求</li>
+<li><code>restricted</code>    表示用户无法更改当前请求权限的状态(出现这种情况的原因可能是家长控制等)</li>
+<li><code>denied</code>        表示用户已拒绝当前请求的权限</li>
+<li><code>authorized</code>    表示用户已同意当前请求的权限</li>
+</ul>
+<h3 id="相册权限"><a href="#相册权限" class="headerlink" title="相册权限"></a>相册权限</h3><p>iOS 8开始到现在苹果爸爸将操作相册的<code>ALAssetsLibrary</code>替换成了<code>Photos</code>，在iOS 9中废弃了原有的<code>ALAssetsLibrary</code>。如果某个应用需要支持iOS 8以下的系统的话，需要针对相册权限进行不同的适配。</p>
+<h4 id="AssetsLibrary简介"><a href="#AssetsLibrary简介" class="headerlink" title="AssetsLibrary简介"></a><code>AssetsLibrary</code>简介</h4><p><code>AssetsLibrary</code>的组成比较符合相册本身的组成，相册中的完整相册对象、相册、相片都能在<code>AssetsLibrary</code>中找到一一对应的组成，这样在使用<code>AssetsLibrary</code>时变得直观而方便。</p>
+<p><code>AssetsLibrary</code>：表示设备中的相册库，通过<code>AssetsLibrary</code>可以获得整个设备中的照片和视频。</p>
+<p><code>ALAssetsGroup</code>：表示整个相册中的一个相册，通过<code>ALAssetsGroup</code>可以获得某一个相册的信息，相册下的所有资源，同时也可以向某一个相册中添加资源。</p>
+<p><code>ALAsset</code>: 表示整个相册中的一个照片或者视频，通过<code>ALAsset</code>可以获得某个照片或视频的详细信息，或保存照片和视频。</p>
+<p><code>ALAssetRepresentation</code>: 它是对<code>ALAsset</code>的封装，可以是developer更加方便的获取<code>ALAsset</code>中的资源信息，每个<code>ALAsset</code>都有至少一个<code>ALAssetRepresentation</code>对象，可以通过<code>defaultRepresentation</code>来获取。</p>
+<h4 id="PhotoKit简介"><a href="#PhotoKit简介" class="headerlink" title="PhotoKit简介"></a><code>PhotoKit</code>简介</h4><p><code>Photos</code>是iOS8时苹果新推出的一个关于系统相册的新框架。改框架应该跟<code>AssetsLibrary</code>的处理不一样，他不是去根据条件遍历数据资源，而是根据条件直接获得指定的资源。简而言之，个人觉得相对于<code>AssetsLibrary</code>更加高效和完整。</p>
+<p><code>PHAsset</code>: 代表相册库中的一个照片、视频或者实时照片，跟<code>ALAsset</code>类似，通过<code>PHAsset</code>可以获取和保存资源</p>
+<p><code>PHFetchOptions</code>: 获取相册中的资源时的参数，可以传 nil。</p>
+<p><code>PHFetchResult</code>: 表示通过<code>PHAsset</code>、<code>PHCollection</code>、<code>PHAssetCollection</code>和<code>PHCollectionList</code>的类方法来检索时，返回的一系列资源对象集合。</p>
+<p><code>PHAssetCollection</code>: 表示一个相册或者一个时刻</p>
+<p><code>PHImageManager</code>: 用于处理资源的加载，加载图片的过程带有缓存处理，可以通过传入一个<code>PHImageRequestOptions</code>控制资源的输出尺寸等规格</p>
+<p><code>PHImageRequestOptions</code>: 如上面所说，控制加载图片时的一系列参数，如是否同步等。</p>
+<h4 id="相册权限请求相关代码"><a href="#相册权限请求相关代码" class="headerlink" title="相册权限请求相关代码"></a>相册权限请求相关代码</h4><p><strong>PhotoKit权限请求</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">PHPhotoLibrary</span>.requestAuthorization &#123; (status: <span class="type">PHAuthorizationStatus</span>) <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">switch</span> status &#123;</span><br><span class="line">    <span class="keyword">case</span> .restricted:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"当前用户无法更改该权限状态"</span>)</span><br><span class="line">    <span class="keyword">case</span> .authorized:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"允许当前权限的请求"</span>)</span><br><span class="line">    <span class="keyword">case</span> .denied:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"拒绝当前权限的请求"</span>)</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"未发起对当前权限的请求"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="相机权限"><a href="#相机权限" class="headerlink" title="相机权限"></a>相机权限</h3><p><strong>判断相机权限</strong><br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> status = <span class="type">AVCaptureDevice</span>.authorizationStatus(<span class="keyword">for</span>: .video)</span><br></pre></td></tr></table></figure></p>
+<p><strong>相机权限请求</strong><br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">AVCaptureDevice</span>.requestAccess(<span class="keyword">for</span>: .video) &#123; (granted) <span class="keyword">in</span></span><br><span class="line">  <span class="keyword">if</span> granted &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"用户同意开启相机权限"</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"用户拒绝开启相机权限"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="通讯录权限"><a href="#通讯录权限" class="headerlink" title="通讯录权限"></a>通讯录权限</h3><p>在iOS开发过程中，通讯录也同相册一样，存在着两套库分别是<code>AddressBook</code>、<code>Contacts</code>。此篇着重于权限请求，所以在此处只是简单介绍以下两者。</p>
+<h4 id="AddressBook简介"><a href="#AddressBook简介" class="headerlink" title="AddressBook简介"></a><code>AddressBook</code>简介</h4><p><code>AddressBook</code>是一套C语言的API。</p>
+<h4 id="Contacts简介"><a href="#Contacts简介" class="headerlink" title="Contacts简介"></a><code>Contacts</code>简介</h4><h3 id="麦克风权限"><a href="#麦克风权限" class="headerlink" title="麦克风权限"></a>麦克风权限</h3><p><strong>判断麦克风权限</strong><br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> status = <span class="type">AVCaptureDevice</span>.authorizationStatus(<span class="keyword">for</span>: .audio)</span><br></pre></td></tr></table></figure></p>
+<p><strong>麦克风权限请求</strong><br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">AVCaptureDevice</span>.requestAccess(<span class="keyword">for</span>: .audio) &#123; (granted) <span class="keyword">in</span></span><br><span class="line">  <span class="keyword">if</span> granted &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"用户同意开启麦克风权限"</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"用户拒绝开启麦克风权限"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="蓝牙权限"><a href="#蓝牙权限" class="headerlink" title="蓝牙权限"></a>蓝牙权限</h3><h3 id="定位权限"><a href="#定位权限" class="headerlink" title="定位权限"></a>定位权限</h3><p><strong>定位权限开启判断</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> localEnable = <span class="type">CLLocationManager</span>.locationServicesEnabled()</span><br><span class="line"><span class="keyword">if</span> !localEnable &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">"用户无法修改该权限状态"</span>)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> localServiceStatus = <span class="type">CLLocationManager</span>.authorizationStatus()</span><br><span class="line">  <span class="keyword">switch</span> localServiceStatus &#123;</span><br><span class="line">    <span class="keyword">case</span> .restricted:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"当前用户无法更改该权限状态"</span>)</span><br><span class="line">    <span class="keyword">case</span> .authorized:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"允许当前权限的请求"</span>)</span><br><span class="line">    <span class="keyword">case</span> .denied:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"拒绝当前权限的请求"</span>)</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"未发起对当前权限的请求"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="媒体库权限"><a href="#媒体库权限" class="headerlink" title="媒体库权限"></a>媒体库权限</h3><p><strong>媒体库权限请求</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@available</span>(iOS <span class="number">9.3</span>, *)</span><br><span class="line"><span class="type">MPMediaLibrary</span>.requestAuthorization &#123; (status) <span class="keyword">in</span></span><br><span class="line">  <span class="keyword">switch</span> status &#123;</span><br><span class="line">  <span class="keyword">case</span> .restricted:</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">"当前用户无法更改该权限状态"</span>)</span><br><span class="line">  <span class="keyword">case</span> .authorized:</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">"允许当前权限的请求"</span>)</span><br><span class="line">  <span class="keyword">case</span> .denied:</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">"拒绝当前权限的请求"</span>)</span><br><span class="line">  <span class="keyword">default</span>:</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">"未发起对当前权限的请求"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="日历权限"><a href="#日历权限" class="headerlink" title="日历权限"></a>日历权限</h3><p>日历里面的事件需要通过一个<code>Calendar database</code>的数据管理，如果需要访问的话，我们可以通过<code>EventKit</code>来进行访问日历的信息。</p>
+<p><em>来自苹果的建议：</em></p>
+<blockquote>
+<p>因为<code>EventStore</code>是<code>Calendar database</code>的数据库引擎，所以应该尽量少的对他进行创建和销毁，所以推荐使用EventStore的时候使用单例模式。</p>
+</blockquote>
+<p><strong>日历权限请求</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">EKEventStore</span>().requestAccess(to: <span class="type">EKEntityType</span>.event) &#123; (granted, error) <span class="keyword">in</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="提醒事项权限"><a href="#提醒事项权限" class="headerlink" title="提醒事项权限"></a>提醒事项权限</h3><p>提醒事项和日历使用相同的框架来访问一个叫做<code>Calendar database</code>的数据库。所以需要访问的话，我们也可以通过<code>EventKit</code>来进行提醒事项的信息。</p>
+<p><em>来自苹果的建议：</em></p>
+<blockquote>
+<p>因为<code>EventStore</code>是<code>Calendar database</code>的数据库引擎，所以应该尽量少的对他进行创建和销毁，所以推荐使用EventStore的时候使用单例模式。</p>
+</blockquote>
+<p><strong>提醒事项权限请求</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">EKEventStore</span>().requestAccess(to: <span class="type">EKEntityType</span>.reminder) &#123; (granted, error) <span class="keyword">in</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="FaceID权限"><a href="#FaceID权限" class="headerlink" title="FaceID权限"></a>FaceID权限</h3><h3 id="健康权限"><a href="#健康权限" class="headerlink" title="健康权限"></a>健康权限</h3><h3 id="运动使用权限"><a href="#运动使用权限" class="headerlink" title="运动使用权限"></a>运动使用权限</h3><h3 id="音乐权限"><a href="#音乐权限" class="headerlink" title="音乐权限"></a>音乐权限</h3><h3 id="NFC权限"><a href="#NFC权限" class="headerlink" title="NFC权限"></a>NFC权限</h3><h3 id="Siri权限"><a href="#Siri权限" class="headerlink" title="Siri权限"></a>Siri权限</h3><p><code>SiriKit</code>是<code>iOS 10</code>引入的。目前Siri能支持的服务有：基于网络的语音/视频通话，发送消息等。在使用<code>SiriKit</code>的时候，用户给Siri传达的指令都会被识别成一个<code>Intents</code>,Siri会根据<code>Intents Domain</code>去提供服务。</p>
+<p>如果我们想要App对接Siri,只需要做以下两件事就够了:</p>
+<p>1.在<code>info.plist</code>中提供App支持的<code>Intents Domain</code>;</p>
+<p>2.实现具体的<code>Intents</code>方法。</p>
+<p><em>具体的会在另外一章完成，此篇只完成权限这块的说名。</em>(@^_^@)</p>
+<p><strong>Siri权限请求</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">INPreferences</span>.requestSiriAuthorization &#123; (status) <span class="keyword">in</span></span><br><span class="line">  <span class="keyword">switch</span> status &#123;</span><br><span class="line">  <span class="keyword">case</span> .restricted:</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">"当前用户无法更改该权限状态"</span>)</span><br><span class="line">  <span class="keyword">case</span> .authorized:</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">"允许当前权限的请求"</span>)</span><br><span class="line">  <span class="keyword">case</span> .denied:</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">"拒绝当前权限的请求"</span>)</span><br><span class="line">  <span class="keyword">default</span>:</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">"未发起对当前权限的请求"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="语音识别权限"><a href="#语音识别权限" class="headerlink" title="语音识别权限"></a>语音识别权限</h3><p><strong>语音识别</strong><br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">SFSpeechRecognizer</span>.requestAuthorization &#123; (status) <span class="keyword">in</span></span><br><span class="line">  <span class="keyword">switch</span> status &#123;</span><br><span class="line">  <span class="keyword">case</span> .restricted:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"当前用户无法更改该权限状态"</span>)</span><br><span class="line">  <span class="keyword">case</span> .authorized:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"允许当前权限的请求"</span>)</span><br><span class="line">  <span class="keyword">case</span> .denied:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"拒绝当前权限的请求"</span>)</span><br><span class="line">  <span class="keyword">default</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"未发起对当前权限的请求"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="智能家具权限"><a href="#智能家具权限" class="headerlink" title="智能家具权限"></a>智能家具权限</h3><h3 id="电视供应商使用权限"><a href="#电视供应商使用权限" class="headerlink" title="电视供应商使用权限"></a>电视供应商使用权限</h3><h3 id="视频用户账号使用权限"><a href="#视频用户账号使用权限" class="headerlink" title="视频用户账号使用权限"></a>视频用户账号使用权限</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/04/iOS-面试题小结/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -334,7 +679,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  
+                  0 字
                 </span>
               
 
@@ -494,7 +839,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  
+                  0 字
                 </span>
               
 
@@ -654,7 +999,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  
+                  0 字
                 </span>
               
 
@@ -814,7 +1159,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  
+                  2.8k 字
                 </span>
               
 
@@ -1040,7 +1385,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1129,7 +1474,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count"></span>
+    <span title="Site words total count">5k</span>
   
 </div>
 
