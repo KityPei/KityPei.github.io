@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="版本 时间     V1.0 2018.12.4    前言正文UIWindow简介UIWindow是一种特殊的UIView,通常在一个App只有一个UIWindow,但是在一些特殊的需求（比如:在App中需要全局的悬浮控件等）在App中也可以有多个UIWindow。 作用 作为容器，承载App程序所要现实的所有视图 传递触摸消息到其他的UIView或者其他的对象 还可以与UIViewCon">
+<meta name="description" content="前言一直以来都想写博客的，做总结的。但是一直因为各种各样的事拖着，也算是用这个总结立一个flag。 APP项目开发完成之后，期待审核上线，但是很多APP都过不了这一关，针对APP审核不通过常遇问题，苹果在开发者平台将导致软件审核被拒绝的十个原因，最主要的几项是有Bug、连接失败、描述不准、存在误导用户等。 本篇持续更新～当然总结呗，肯定是实际开发遇到的，作为一枚码畜的话，也不想被苹果拒绝。 正文问">
 <meta name="keywords" content="总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UIWindow、UIView和CALayer之间的联系和区别">
-<meta property="og:url" content="http://yoursite.com/2018/12/04/UIWindow、UIView和CALayer之间的联系和区别/index.html">
+<meta property="og:title" content="App Store审核被拒原因小结">
+<meta property="og:url" content="http://yoursite.com/2018/01/01/App-Store审核被拒原因小结/index.html">
 <meta property="og:site_name" content="Katy 裴">
-<meta property="og:description" content="版本 时间     V1.0 2018.12.4    前言正文UIWindow简介UIWindow是一种特殊的UIView,通常在一个App只有一个UIWindow,但是在一些特殊的需求（比如:在App中需要全局的悬浮控件等）在App中也可以有多个UIWindow。 作用 作为容器，承载App程序所要现实的所有视图 传递触摸消息到其他的UIView或者其他的对象 还可以与UIViewCon">
+<meta property="og:description" content="前言一直以来都想写博客的，做总结的。但是一直因为各种各样的事拖着，也算是用这个总结立一个flag。 APP项目开发完成之后，期待审核上线，但是很多APP都过不了这一关，针对APP审核不通过常遇问题，苹果在开发者平台将导致软件审核被拒绝的十个原因，最主要的几项是有Bug、连接失败、描述不准、存在误导用户等。 本篇持续更新～当然总结呗，肯定是实际开发遇到的，作为一枚码畜的话，也不想被苹果拒绝。 正文问">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-04T07:14:03.015Z">
+<meta property="og:updated_time" content="2019-01-04T07:12:02.404Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UIWindow、UIView和CALayer之间的联系和区别">
-<meta name="twitter:description" content="版本 时间     V1.0 2018.12.4    前言正文UIWindow简介UIWindow是一种特殊的UIView,通常在一个App只有一个UIWindow,但是在一些特殊的需求（比如:在App中需要全局的悬浮控件等）在App中也可以有多个UIWindow。 作用 作为容器，承载App程序所要现实的所有视图 传递触摸消息到其他的UIView或者其他的对象 还可以与UIViewCon">
+<meta name="twitter:title" content="App Store审核被拒原因小结">
+<meta name="twitter:description" content="前言一直以来都想写博客的，做总结的。但是一直因为各种各样的事拖着，也算是用这个总结立一个flag。 APP项目开发完成之后，期待审核上线，但是很多APP都过不了这一关，针对APP审核不通过常遇问题，苹果在开发者平台将导致软件审核被拒绝的十个原因，最主要的几项是有Bug、连接失败、描述不准、存在误导用户等。 本篇持续更新～当然总结呗，肯定是实际开发遇到的，作为一枚码畜的话，也不想被苹果拒绝。 正文问">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/04/UIWindow、UIView和CALayer之间的联系和区别/">
+  <link rel="canonical" href="http://yoursite.com/2018/01/01/App-Store审核被拒原因小结/">
 
 
 
 
 
-  <title>UIWindow、UIView和CALayer之间的联系和区别 | Katy 裴</title>
+  <title>App Store审核被拒原因小结 | Katy 裴</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/04/UIWindow、UIView和CALayer之间的联系和区别/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/01/App-Store审核被拒原因小结/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kity Pei">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">UIWindow、UIView和CALayer之间的联系和区别</h1>
+          <h1 class="post-title" itemprop="name headline">App Store审核被拒原因小结</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-04T22:27:02+08:00">
-                2018-12-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-01T11:25:42+08:00">
+                2018-01-01
               </time>
             
 
@@ -351,7 +351,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  424 字
+                  653 字
                 </span>
               
 
@@ -376,38 +376,97 @@
       
 
       
-        <table>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一直以来都想写博客的，做总结的。但是一直因为各种各样的事拖着，也算是用这个总结立一个flag。</p>
+<p>APP项目开发完成之后，期待审核上线，但是很多APP都过不了这一关，针对APP审核不通过常遇问题，苹果在开发者平台将导致软件审核被拒绝的十个原因，最主要的几项是有Bug、连接失败、描述不准、存在误导用户等。</p>
+<p><strong>本篇持续更新～</strong>当然总结呗，肯定是实际开发遇到的，作为一枚码畜的话，也不想被苹果拒绝。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h3><h4 id="被拒原因"><a href="#被拒原因" class="headerlink" title="被拒原因"></a>被拒原因</h4><p><strong>Guideline 5.1.1 - Legal - Privacy - Data Collection and Storage</strong></p>
+<p>We noticed that your app requests the user’s consent to access their location but does not clarify the use of this feature in the permission modal alert.</p>
+<p><strong>Guideline 5.1.5 - Legal - Privacy - Location Services</strong></p>
+<p>Your app uses location data for features that are not relevant to location. </p>
+<h4 id="被拒原因分析"><a href="#被拒原因分析" class="headerlink" title="被拒原因分析"></a>被拒原因分析</h4><p><strong><em>定位使用场景提示文本不够明确，需提示用户为何打开此功能</em></strong><br><strong><em>定位使用场景提示文本不够明确，需提示用户为何打开此功能</em></strong><br><strong><em>定位使用场景提示文本不够明确，需提示用户为何打开此功能</em></strong></p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>iOS 10发布以来，苹果公司为了用户的信息安全，在访问内部应用都加入了隐私权限设置，让用户来选择是否使用。如果在开发中不对这些权限进行设置的话造成crash。</p>
+<p><strong><em>根据实际需求场景写提示文本，提示文本不明确会被苹果拒绝的</em></strong></p>
+<table>
 <thead>
 <tr>
-<th>版本</th>
-<th>时间</th>
+<th>权限</th>
+<th style="text-align:center">info.plist中key</th>
+<th style="text-align:center">info.plist中Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>V1.0</td>
-<td>2018.12.4</td>
+<td>相册</td>
+<td style="text-align:center">NSPhotoLibraryUsageDescription</td>
+<td style="text-align:center">是否允许此app使用相册?</td>
+</tr>
+<tr>
+<td>相机</td>
+<td style="text-align:center">NSCameraUsageDescription</td>
+<td style="text-align:center">是否允许此app使用相机?</td>
+</tr>
+<tr>
+<td>麦克风</td>
+<td style="text-align:center">NSMicrophoneUsageDescription</td>
+<td style="text-align:center">是否允许此app使用麦克风?</td>
+</tr>
+<tr>
+<td>位置</td>
+<td style="text-align:center">NSLocationUsageDescription</td>
+<td style="text-align:center">是否允许此app使用位置？</td>
+</tr>
+<tr>
+<td>在使用期间访问位置</td>
+<td style="text-align:center">NSLocationWhenInUseUsageDescription</td>
+<td style="text-align:center">是否允许此app在使用期间访问位置?</td>
+</tr>
+<tr>
+<td>始终访问位置</td>
+<td style="text-align:center">NSLocationAlwaysUsageDescription</td>
+<td style="text-align:center">是否允许此app始终访问位置？</td>
+</tr>
+<tr>
+<td>日历</td>
+<td style="text-align:center">NSCalendarsUsageDescription</td>
+<td style="text-align:center">是否允许此app使用日历?</td>
+</tr>
+<tr>
+<td>提醒事项</td>
+<td style="text-align:center">NSRemindersUsageDescription</td>
+<td style="text-align:center">是否允许此app使用提醒事项?</td>
+</tr>
+<tr>
+<td>运动与健身</td>
+<td style="text-align:center">NSMotionUsageDescription</td>
+<td style="text-align:center">是否允许此app使用运动与健身?</td>
+</tr>
+<tr>
+<td>健康更新</td>
+<td style="text-align:center">NSHealthUpdateUsageDescription</td>
+<td style="text-align:center">是否允许此app使用健康更新?</td>
+</tr>
+<tr>
+<td>健康分享</td>
+<td style="text-align:center">NSHealthShareUsageDescription</td>
+<td style="text-align:center">是否允许此app使用健康分享?</td>
+</tr>
+<tr>
+<td>蓝牙</td>
+<td style="text-align:center">NSBluetoothPeripheralUsageDescription</td>
+<td style="text-align:center">是否允许此app使用蓝牙?</td>
+</tr>
+<tr>
+<td>媒体资料库</td>
+<td style="text-align:center">NSAppleMusicUsageDescription</td>
+<td style="text-align:center">是否允许此app使用媒体资料库?</td>
+</tr>
+<tr>
+<td>语音识别</td>
+<td style="text-align:center">NSSpeechRecognitionUsageDescription</td>
+<td style="text-align:center">是否允许此app使用语音识别?</td>
 </tr>
 </tbody>
 </table>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="UIWindow"><a href="#UIWindow" class="headerlink" title="UIWindow"></a>UIWindow</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p><code>UIWindow</code>是一种特殊的<code>UIView</code>,通常在一个App只有一个<code>UIWindow</code>,但是在一些特殊的需求（比如:在App中需要全局的悬浮控件等）在App中也可以有多个<code>UIWindow</code>。</p>
-<h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><ul>
-<li>作为容器，承载App程序所要现实的所有视图</li>
-<li>传递触摸消息到其他的UIView或者其他的对象</li>
-<li>还可以与UIViewController协同共奏，以便与完成设备方向旋转支持等</li>
-</ul>
-<h3 id="UIView"><a href="#UIView" class="headerlink" title="UIView"></a>UIView</h3><h4 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h4><p><code>UIView</code>是在<code>UIKit.framework</code>中定义的，<code>UIView</code>继承于<code>UIResponder</code>，同时<code>UIView</code>是视图的基类。</p>
-<h4 id="作用-1"><a href="#作用-1" class="headerlink" title="作用"></a>作用</h4><ul>
-<li><code>UIView</code>继承于<code>UIResponder</code>，<code>UIResponder</code>是用来响应事件的，也就是<code>UIView</code>是用来响应事件的。</li>
-<li><code>UIView</code>属于<code>UIKit.framework</code>框架，负责渲染矩形区域的内容，为矩形区域添加动画，响应区域的触摸事件，还涉及布局和管理一个或多个子视图</li>
-</ul>
-<h3 id="CALayer"><a href="#CALayer" class="headerlink" title="CALayer"></a>CALayer</h3><h4 id="简介-2"><a href="#简介-2" class="headerlink" title="简介"></a>简介</h4><p><code>CALayer</code>包含在<code>QuartzCore</code>框架中，这是一个跨平台的框架，既可以用在iOS中又可以用在Mac OS X中。在使用<code>Core Animation</code>开发动画的本质就是将<code>CALayer</code>中的内容转化为位图从而供硬件操作，所以要熟练掌握动画操作必须先来熟悉CALayer。</p>
-<h4 id="作用-2"><a href="#作用-2" class="headerlink" title="作用"></a>作用</h4><ul>
-<li><code>CALayer</code>是承载绘制内容的对象</li>
-<li><code>CALayer</code>可以用来实现动画效果</li>
-</ul>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><strong>区别联系</strong></p>
-<p><code>UIWindow</code>是<code>UIView</code>的子类，<code>UIWindow</code>承载<code>UIView</code>的显示，<code>UIView</code>的显示又依赖于<code>CALayer</code>的绘制，但是这仅仅是显示的关系，但是当程序要完成事件的响应的话，需要<code>UIWindow</code>将事件传递给<code>UIView</code>进行响应，<code>CALayer</code>是不具有响应功能的。同时<code>CALayer</code>负责一些动画的完成。</p>
 
       
     </div>
@@ -438,18 +497,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/24/Swift代码规范/" rel="next" title="Swift代码规范">
-                <i class="fa fa-chevron-left"></i> Swift代码规范
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/06/iOS-权限设置/" rel="prev" title="iOS 权限设置">
-                iOS 权限设置 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/24/Swift代码规范/" rel="prev" title="Swift代码规范">
+                Swift代码规范 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -598,7 +653,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UIWindow"><span class="nav-number">2.1.</span> <span class="nav-text">UIWindow</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-number">2.1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作用"><span class="nav-number">2.1.2.</span> <span class="nav-text">作用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIView"><span class="nav-number">2.2.</span> <span class="nav-text">UIView</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作用-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">作用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CALayer"><span class="nav-number">2.3.</span> <span class="nav-text">CALayer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作用-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">作用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">2.4.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题一"><span class="nav-number">2.1.</span> <span class="nav-text">问题一</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#被拒原因"><span class="nav-number">2.1.1.</span> <span class="nav-text">被拒原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#被拒原因分析"><span class="nav-number">2.1.2.</span> <span class="nav-text">被拒原因分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">2.1.3.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
