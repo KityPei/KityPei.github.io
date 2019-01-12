@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="总结,">
+  <meta name="keywords" content="学习笔记,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="前言一直以来都想写博客的，做总结的。但是一直因为各种各样的事拖着，也算是用这个总结立一个flag。 APP项目开发完成之后，期待审核上线，但是很多APP都过不了这一关，针对APP审核不通过常遇问题，苹果在开发者平台将导致软件审核被拒绝的十个原因，最主要的几项是有Bug、连接失败、描述不准、存在误导用户等。 本篇持续更新～当然总结呗，肯定是实际开发遇到的，作为一枚码畜的话，也不想被苹果拒绝。 正文问">
-<meta name="keywords" content="总结">
+<meta name="description" content="前言最近一段时间在准备上线一款自己的App，想用一个屏幕录制功能做个简易的用法说明，所以有了这么一篇的学习笔记。在iOS 9 之前录制屏幕可能需要借用一些第三方库或者越狱，当然现在iOS12了已经，越狱这么“严重的”事，谁去做呀，能用到系统库当然不会用第三方库了，正统多重要呀。直接进正文吧，ReplayKit才是本篇学习笔记的重点。 正文简介录屏功能是iOS 10 新推出的特性，苹果在iOS 9的">
+<meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="App Store审核被拒原因小结">
-<meta property="og:url" content="http://yoursite.com/2019/01/01/App-Store审核被拒原因小结/index.html">
+<meta property="og:title" content="iOS 学习笔记之屏幕录制ReplayKit">
+<meta property="og:url" content="http://yoursite.com/2019/01/07/iOS学习笔记之屏幕录制ReplayKit/index.html">
 <meta property="og:site_name" content="Katy 裴">
-<meta property="og:description" content="前言一直以来都想写博客的，做总结的。但是一直因为各种各样的事拖着，也算是用这个总结立一个flag。 APP项目开发完成之后，期待审核上线，但是很多APP都过不了这一关，针对APP审核不通过常遇问题，苹果在开发者平台将导致软件审核被拒绝的十个原因，最主要的几项是有Bug、连接失败、描述不准、存在误导用户等。 本篇持续更新～当然总结呗，肯定是实际开发遇到的，作为一枚码畜的话，也不想被苹果拒绝。 正文问">
+<meta property="og:description" content="前言最近一段时间在准备上线一款自己的App，想用一个屏幕录制功能做个简易的用法说明，所以有了这么一篇的学习笔记。在iOS 9 之前录制屏幕可能需要借用一些第三方库或者越狱，当然现在iOS12了已经，越狱这么“严重的”事，谁去做呀，能用到系统库当然不会用第三方库了，正统多重要呀。直接进正文吧，ReplayKit才是本篇学习笔记的重点。 正文简介录屏功能是iOS 10 新推出的特性，苹果在iOS 9的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-01T03:25:42.000Z">
+<meta property="og:updated_time" content="2019-01-12T09:31:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="App Store审核被拒原因小结">
-<meta name="twitter:description" content="前言一直以来都想写博客的，做总结的。但是一直因为各种各样的事拖着，也算是用这个总结立一个flag。 APP项目开发完成之后，期待审核上线，但是很多APP都过不了这一关，针对APP审核不通过常遇问题，苹果在开发者平台将导致软件审核被拒绝的十个原因，最主要的几项是有Bug、连接失败、描述不准、存在误导用户等。 本篇持续更新～当然总结呗，肯定是实际开发遇到的，作为一枚码畜的话，也不想被苹果拒绝。 正文问">
+<meta name="twitter:title" content="iOS 学习笔记之屏幕录制ReplayKit">
+<meta name="twitter:description" content="前言最近一段时间在准备上线一款自己的App，想用一个屏幕录制功能做个简易的用法说明，所以有了这么一篇的学习笔记。在iOS 9 之前录制屏幕可能需要借用一些第三方库或者越狱，当然现在iOS12了已经，越狱这么“严重的”事，谁去做呀，能用到系统库当然不会用第三方库了，正统多重要呀。直接进正文吧，ReplayKit才是本篇学习笔记的重点。 正文简介录屏功能是iOS 10 新推出的特性，苹果在iOS 9的">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/01/App-Store审核被拒原因小结/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/07/iOS学习笔记之屏幕录制ReplayKit/">
 
 
 
 
 
-  <title>App Store审核被拒原因小结 | Katy 裴</title>
+  <title>iOS 学习笔记之屏幕录制ReplayKit | Katy 裴</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/01/App-Store审核被拒原因小结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/07/iOS学习笔记之屏幕录制ReplayKit/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kity Pei">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">App Store审核被拒原因小结</h1>
+          <h1 class="post-title" itemprop="name headline">iOS 学习笔记之屏幕录制ReplayKit</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-01T11:25:42+08:00">
-                2019-01-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-07T21:33:01+08:00">
+                2019-01-07
               </time>
             
 
@@ -302,6 +302,13 @@
             
           </span>
 
+          
+            <span class="post-updated">
+              &nbsp; | &nbsp; 更新于
+              <time itemprop="dateUpdated" datetime="2019-01-12T17:31:55+08:00" content="2019-01-12">
+                2019-01-12
+              </time>
+            </span>
           
 
           
@@ -353,7 +360,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  653 字
+                  874 字
                 </span>
               
 
@@ -378,97 +385,58 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一直以来都想写博客的，做总结的。但是一直因为各种各样的事拖着，也算是用这个总结立一个flag。</p>
-<p>APP项目开发完成之后，期待审核上线，但是很多APP都过不了这一关，针对APP审核不通过常遇问题，苹果在开发者平台将导致软件审核被拒绝的十个原因，最主要的几项是有Bug、连接失败、描述不准、存在误导用户等。</p>
-<p><strong>本篇持续更新～</strong>当然总结呗，肯定是实际开发遇到的，作为一枚码畜的话，也不想被苹果拒绝。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h3><h4 id="被拒原因"><a href="#被拒原因" class="headerlink" title="被拒原因"></a>被拒原因</h4><p><strong>Guideline 5.1.1 - Legal - Privacy - Data Collection and Storage</strong></p>
-<p>We noticed that your app requests the user’s consent to access their location but does not clarify the use of this feature in the permission modal alert.</p>
-<p><strong>Guideline 5.1.5 - Legal - Privacy - Location Services</strong></p>
-<p>Your app uses location data for features that are not relevant to location. </p>
-<h4 id="被拒原因分析"><a href="#被拒原因分析" class="headerlink" title="被拒原因分析"></a>被拒原因分析</h4><p><strong><em>定位使用场景提示文本不够明确，需提示用户为何打开此功能</em></strong><br><strong><em>定位使用场景提示文本不够明确，需提示用户为何打开此功能</em></strong><br><strong><em>定位使用场景提示文本不够明确，需提示用户为何打开此功能</em></strong></p>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>iOS 10发布以来，苹果公司为了用户的信息安全，在访问内部应用都加入了隐私权限设置，让用户来选择是否使用。如果在开发中不对这些权限进行设置的话造成crash。</p>
-<p><strong><em>根据实际需求场景写提示文本，提示文本不明确会被苹果拒绝的</em></strong></p>
-<table>
-<thead>
-<tr>
-<th>权限</th>
-<th style="text-align:center">info.plist中key</th>
-<th style="text-align:center">info.plist中Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>相册</td>
-<td style="text-align:center">NSPhotoLibraryUsageDescription</td>
-<td style="text-align:center">是否允许此app使用相册?</td>
-</tr>
-<tr>
-<td>相机</td>
-<td style="text-align:center">NSCameraUsageDescription</td>
-<td style="text-align:center">是否允许此app使用相机?</td>
-</tr>
-<tr>
-<td>麦克风</td>
-<td style="text-align:center">NSMicrophoneUsageDescription</td>
-<td style="text-align:center">是否允许此app使用麦克风?</td>
-</tr>
-<tr>
-<td>位置</td>
-<td style="text-align:center">NSLocationUsageDescription</td>
-<td style="text-align:center">是否允许此app使用位置？</td>
-</tr>
-<tr>
-<td>在使用期间访问位置</td>
-<td style="text-align:center">NSLocationWhenInUseUsageDescription</td>
-<td style="text-align:center">是否允许此app在使用期间访问位置?</td>
-</tr>
-<tr>
-<td>始终访问位置</td>
-<td style="text-align:center">NSLocationAlwaysUsageDescription</td>
-<td style="text-align:center">是否允许此app始终访问位置？</td>
-</tr>
-<tr>
-<td>日历</td>
-<td style="text-align:center">NSCalendarsUsageDescription</td>
-<td style="text-align:center">是否允许此app使用日历?</td>
-</tr>
-<tr>
-<td>提醒事项</td>
-<td style="text-align:center">NSRemindersUsageDescription</td>
-<td style="text-align:center">是否允许此app使用提醒事项?</td>
-</tr>
-<tr>
-<td>运动与健身</td>
-<td style="text-align:center">NSMotionUsageDescription</td>
-<td style="text-align:center">是否允许此app使用运动与健身?</td>
-</tr>
-<tr>
-<td>健康更新</td>
-<td style="text-align:center">NSHealthUpdateUsageDescription</td>
-<td style="text-align:center">是否允许此app使用健康更新?</td>
-</tr>
-<tr>
-<td>健康分享</td>
-<td style="text-align:center">NSHealthShareUsageDescription</td>
-<td style="text-align:center">是否允许此app使用健康分享?</td>
-</tr>
-<tr>
-<td>蓝牙</td>
-<td style="text-align:center">NSBluetoothPeripheralUsageDescription</td>
-<td style="text-align:center">是否允许此app使用蓝牙?</td>
-</tr>
-<tr>
-<td>媒体资料库</td>
-<td style="text-align:center">NSAppleMusicUsageDescription</td>
-<td style="text-align:center">是否允许此app使用媒体资料库?</td>
-</tr>
-<tr>
-<td>语音识别</td>
-<td style="text-align:center">NSSpeechRecognitionUsageDescription</td>
-<td style="text-align:center">是否允许此app使用语音识别?</td>
-</tr>
-</tbody>
-</table>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近一段时间在准备上线一款自己的App，想用一个屏幕录制功能做个简易的用法说明，所以有了这么一篇的学习笔记。在iOS 9 之前录制屏幕可能需要借用一些第三方库或者越狱，当然现在iOS12了已经，越狱这么“严重的”事，谁去做呀，能用到系统库当然不会用第三方库了，正统多重要呀。直接进正文吧，<code>ReplayKit</code>才是本篇学习笔记的重点。</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>录屏功能是iOS 10 新推出的特性，苹果在iOS 9的 <code>ReplayKit</code>保存录屏的基础上，增加了视频流的实时直播功能，<a href="https://devstreaming-cdn.apple.com/videos/wwdc/2016/601nsio90cd7ylwimk9/601/601_go_live_with_replaykit.pdf" target="_blank" rel="noopener">官方说明</a>。iOS 11又再次增强成<a href="https://developer.apple.com/videos/play/wwdc2017/606/" target="_blank" rel="noopener">ReplayKit 2</a>，进一步的提升了<code>ReplayKit</code>的易用性和通用性，并且可以对整个手机实现屏幕录制。</p>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><ul>
+<li><p><strong>场景一</strong></p>
+<p>教育场景，告诉用户使用方法或者客服通过用户的共享的屏幕查看用户遇到的问题和场景还有操作，快速定位问题所在。</p>
+</li>
+<li><p><strong>场景二</strong></p>
+<p>直播场景，比方说当下最火的视频直播。</p>
+</li>
+</ul>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><h3 id="RPPreviewViewController"><a href="#RPPreviewViewController" class="headerlink" title="RPPreviewViewController"></a><code>RPPreviewViewController</code></h3><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p><code>RPPreviewViewController</code>是屏幕录制之后用来展示预览和编辑的视图对象。有两个mode控制的，一个是<code>preview</code>(预览)，一个是<code>share</code>（分享）。</p>
+<h4 id="常用代理说明"><a href="#常用代理说明" class="headerlink" title="常用代理说明"></a>常用代理说明</h4><blockquote>
+<p>当用户完成对屏幕记录的更改时，应用程序负责关闭表示用户界面的视图控制器。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func previewControllerDidFinish(_ previewController: RPPreviewViewController)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>当用户完成对屏幕记录的更改时，应用程序负责关闭表示用户界面的视图控制器。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func previewController(_ previewController: RPPreviewViewController, didFinishWithActivityTypes activityTypes: Set&lt;String&gt;)</span><br></pre></td></tr></table></figure>
+<h3 id="RPScreenRecorder"><a href="#RPScreenRecorder" class="headerlink" title="RPScreenRecorder"></a><code>RPScreenRecorder</code></h3><h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><p><code>RPScreenRecorder</code>是主要录制屏幕的类,<code>RPScreenRecorder</code>是一个单例对象，但是<code>RPScreenRecorder</code>不能从<code>AVPlayer</code>录制视频。</p>
+<h4 id="常用代理说明-1"><a href="#常用代理说明-1" class="headerlink" title="常用代理说明"></a>常用代理说明</h4><blockquote>
+<p>当录制出现错误或记录可用性更改而发生的停止，会调用如下方法</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func screenRecorder(RPScreenRecorder, didStopRecordingWith: RPPreviewViewController?, error: Error?)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>屏幕录制可用性改变（由于不支持硬件、用户的设备通过Airplay或者TVOut会话显示信息，或正在录制其他的应用程序，屏幕记录可能无法使用）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func screenRecorderDidChangeAvailability(_ screenRecorder: RPScreenRecorder)</span><br></pre></td></tr></table></figure>
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><h3 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h3><p>1.由于iOS 9才开始支持<code>ReplayKit</code>框架，所以需要判断设备是否支持<code>ReplayKit</code>;</p>
+<blockquote>
+<p>以下方法可以判断屏幕录制是否可用</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RPScreenRecorder.shared().isAvailable</span><br></pre></td></tr></table></figure>
+<p>2.开始录制</p>
+<blockquote>
+<p>通过<code>RPScreenRecorder</code>的单例对象调用以下方法进行开始录制。<code>microphoneEnabled</code>这个参数表示在录制过程中是否激活麦克风状态，默认是false。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func startRecording(withMicrophoneEnabled microphoneEnabled: Bool, handler: ((Error?) -&gt; Void)? = nil)</span><br></pre></td></tr></table></figure>
+<p>3.停止录制</p>
+<blockquote>
+<p>通过<code>RPScreenRecorder</code>的单例对象调用以下方法进行停止录制。当记录因错误或者录制可用性更改而停止，会调用这个回调方法，如果停止录制的时候有可用的内容时，会返回一个<code>RPPreviewViewController</code>对象。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func screenRecorder(_ screenRecorder: RPScreenRecorder, didStopRecordingWith previewViewController: RPPreviewViewController?, error: Error?)</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li><code>ReplayKit</code>不支持模拟器;</li>
+<li><code>ReplayKit</code>不能录制<code>AVPlayer</code>呈现的画面;</li>
+<li><code>ReplayKit</code>在录制的时候，需要请求用户权限;</li>
+<li><code>ReplayKit</code>在录制的时候，会把应用程序在<code>UIWindow</code>中渲染的一切视图，任何细节都不放过;</li>
+<li><code>ReplayKit</code>不支持自定义预览视图;</li>
+<li><code>ReplayKit</code>无法修改录制视频保存路径;</li>
+<li><code>ReplayKit</code>在录制的时候会在来电话时或者用户输入时停止录制。</li>
+</ul>
 
       
     </div>
@@ -486,7 +454,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/总结/" rel="tag"># 总结</a>
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
           
         </div>
       
@@ -499,8 +467,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/14/iOS面试题小结/" rel="next" title="iOS 面试题小结">
-                <i class="fa fa-chevron-left"></i> iOS 面试题小结
+              <a href="/2019/01/07/String在OC和Swift中的区别/" rel="next" title="String 在OC和Swift中的区别">
+                <i class="fa fa-chevron-left"></i> String 在OC和Swift中的区别
               </a>
             
           </div>
@@ -508,10 +476,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/05/iOS学习笔记之UICollectionView小结/" rel="prev" title="iOS学习笔记之UICollectionView小结">
-                iOS学习笔记之UICollectionView小结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -659,7 +623,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题一"><span class="nav-number">2.1.</span> <span class="nav-text">问题一</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#被拒原因"><span class="nav-number">2.1.1.</span> <span class="nav-text">被拒原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#被拒原因分析"><span class="nav-number">2.1.2.</span> <span class="nav-text">被拒原因分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">2.1.3.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">2.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用场景"><span class="nav-number">2.2.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">2.3.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RPPreviewViewController"><span class="nav-number">2.3.1.</span> <span class="nav-text">RPPreviewViewController</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用代理说明"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">常用代理说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RPScreenRecorder"><span class="nav-number">2.3.2.</span> <span class="nav-text">RPScreenRecorder</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述-1"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用代理说明-1"><span class="nav-number">2.3.2.2.</span> <span class="nav-text">常用代理说明</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用法"><span class="nav-number">2.4.</span> <span class="nav-text">用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#描述-2"><span class="nav-number">2.4.1.</span> <span class="nav-text">描述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">2.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
 
           </div>
