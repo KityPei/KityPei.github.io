@@ -353,7 +353,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.1k 字
+                  3k 字
                 </span>
               
 
@@ -463,7 +463,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -&gt; CGSize</span><br></pre></td></tr></table></figure>
 <h2 id="自定义UICollectionViewLayout"><a href="#自定义UICollectionViewLayout" class="headerlink" title="自定义UICollectionViewLayout"></a>自定义UICollectionViewLayout</h2><h3 id="简单说明"><a href="#简单说明" class="headerlink" title="简单说明"></a>简单说明</h3><p>在实际开发中，作为iOS开发者可能在用到UICollectionView的时候，大多数都要使用自定义UICollectionViewLayout来定制一些极其能让用户接受的展示UI，确实如此。<br>在自定义UICollectionViewLayout的时候我觉得可以分成3个步骤：<br>1.重写UICollectionViewLayout的prepareLayout，在该方法里事先将计算好的一些必要的布局信息，并且存储起来；<br>2.基于prepareLayout方法中的布局信息，使用collectionViewContentSize方法返回UICollectionView的内容尺寸；<br>3.使用layoutAttributesForElementsInRect方法返回指定的区域的cell、Supplementary View和Decoration View的布局属性。</p>
 <h3 id="自定义UICollectionViewLayout的Demo"><a href="#自定义UICollectionViewLayout的Demo" class="headerlink" title="自定义UICollectionViewLayout的Demo"></a>自定义UICollectionViewLayout的Demo</h3><hr>
-<p><strong><em>稍后补充Demo以及效果图</em></strong></p>
+<p><a href="https://github.com/fdzsergio/SFFocusViewLayout" target="_blank" rel="noopener">SFFocusViewLayout</a></p>
+<p><a href="https://github.com/yacir/CollectionViewSlantedLayout" target="_blank" rel="noopener">CollectionViewSlantedLayout</a></p>
+<p><a href="https://github.com/bryceredd/RFQuiltLayout" target="_blank" rel="noopener">RFQuiltLayout</a></p>
+<p><a href="https://github.com/SoySauceLab/CollectionKit" target="_blank" rel="noopener">CollectionKit</a></p>
 <hr>
 <h2 id="开发过程中遇到的问题以及解决方案"><a href="#开发过程中遇到的问题以及解决方案" class="headerlink" title="开发过程中遇到的问题以及解决方案"></a>开发过程中遇到的问题以及解决方案</h2><h3 id="问题一"><a href="#问题一" class="headerlink" title="问题一:"></a>问题一:</h3><p><strong><em>报错信息:</em></strong></p>
 <blockquote>
