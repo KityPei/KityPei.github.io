@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Katy 裴">
 <meta property="og:description" content="前言今天一个朋友跟我讨论一下这个深拷贝和浅拷贝的话题，然后感觉自己说的也不是很清楚，所以又特地找了一些资料，让自己再了解学习一下。 正文概念浅拷贝浅拷贝指的是复制引用对象的指针，而不是复制引用对象本身，拷贝出来的对象指针和引用对象的指针指向同一块内存地址，当这块内存地址销毁的时候，指向这块内存地址的所有指针也需要重新定义，不然就会造成野指针错误。 深拷贝深拷贝指的是复制引用对象的内容，也就是说">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-21T10:32:20.828Z">
+<meta property="og:updated_time" content="2019-01-21T14:59:21.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我理解的深拷贝和浅拷贝">
 <meta name="twitter:description" content="前言今天一个朋友跟我讨论一下这个深拷贝和浅拷贝的话题，然后感觉自己说的也不是很清楚，所以又特地找了一些资料，让自己再了解学习一下。 正文概念浅拷贝浅拷贝指的是复制引用对象的指针，而不是复制引用对象本身，拷贝出来的对象指针和引用对象的指针指向同一块内存地址，当这块内存地址销毁的时候，指向这块内存地址的所有指针也需要重新定义，不然就会造成野指针错误。 深拷贝深拷贝指的是复制引用对象的内容，也就是说">
@@ -305,7 +305,7 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2019-01-21T18:32:20+08:00" content="2019-01-21">
+              <time itemprop="dateUpdated" datetime="2019-01-21T22:59:21+08:00" content="2019-01-21">
                 2019-01-21
               </time>
             </span>
@@ -388,7 +388,7 @@
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天一个朋友跟我讨论一下这个<code>深拷贝</code>和<code>浅拷贝</code>的话题，然后感觉自己说的也不是很清楚，所以又特地找了一些资料，让自己再了解学习一下。</p>
 <h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><p><code>浅拷贝</code>指的是复制引用对象的指针，而不是复制引用对象本身，拷贝出来的对象指针和引用对象的指针指向同一块内存地址，当这块内存地址销毁的时候，指向这块内存地址的所有指针也需要重新定义，不然就会造成野指针错误。</p>
 <h3 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h3><p><code>深拷贝</code>指的是复制引用对象的内容，也就是说内容的所占有的内存地址需要重新分配，复制完之后，内存中的值是完全相同的，但是内存地址是不一样的，拷贝得到的对象和引用对象之间是互不影响，也互不干扰。</p>
-<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><h3 id="浅拷贝场景"><a href="#浅拷贝场景" class="headerlink" title="浅拷贝场景"></a>浅拷贝场景</h3><p>1.使用<code>retain</code>操作，返回的对象是否可变与被拷贝对象保持一致，在<code>iOS</code>中，使用<code>retain</code>关键字进行引用计数，这是一种更加保险的浅拷贝;<br>2.，对于不可变对象进行<code>copy</code>操作的是浅拷贝，引用计数每次<code>+1</code>;</p>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><h3 id="浅拷贝场景"><a href="#浅拷贝场景" class="headerlink" title="浅拷贝场景"></a>浅拷贝场景</h3><p>1.使用<code>retain</code>操作，返回的对象是否可变与被拷贝对象保持一致，在<code>iOS</code>中，使用<code>retain</code>关键字进行引用计数，这是一种更加保险的浅拷贝;<br>2.对于不可变对象进行<code>copy</code>操作的是浅拷贝，引用计数每次<code>+1</code>;</p>
 <h3 id="深拷贝场景"><a href="#深拷贝场景" class="headerlink" title="深拷贝场景"></a>深拷贝场景</h3><p>1.对可变对象进行<code>copy</code>操作，引用计数不改变<br>2.使用<code>mutableCopy</code>操作的始终是深拷贝，引用计数不改变，返回的是一个可变对象。</p>
 <h3 id="代码验证"><a href="#代码验证" class="headerlink" title="代码验证"></a>代码验证</h3><h4 id="代码一"><a href="#代码一" class="headerlink" title="代码一"></a>代码一</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">NSArray *list = [[NSArray alloc] initWithObjects:@&quot;1&quot;,@&quot;2&quot;,@&quot;3&quot;,@&quot;4&quot;, nil];</span><br><span class="line">NSLog(@&quot;\n被拷贝对象的内存地址:%p&quot;,list);</span><br><span class="line">NSLog(@&quot;\n====被拷贝对象的引用计数:%ld&quot;,CFGetRetainCount((__bridge CFTypeRef)list));</span><br><span class="line"></span><br><span class="line">NSArray *listCopy = [list copy];</span><br><span class="line">NSLog(@&quot;\n拷贝对象的内存地址:%p&quot;,listCopy);</span><br><span class="line">NSLog(@&quot;\n====被拷贝对象的引用计数:%ld&quot;,CFGetRetainCount((__bridge CFTypeRef)list));</span><br><span class="line"></span><br><span class="line">NSMutableArray *listMutableCopy = [list copy];</span><br><span class="line">NSLog(@&quot;\n拷贝对象的内存地址:%p&quot;,listMutableCopy);</span><br><span class="line">NSLog(@&quot;\n====被拷贝对象的引用计数:%ld&quot;,CFGetRetainCount((__bridge CFTypeRef)list));</span><br><span class="line"></span><br><span class="line">NSMutableArray *mutablelistMutableCopy = [list mutableCopy];</span><br><span class="line">NSLog(@&quot;\n拷贝对象的内存地址:%p&quot;,mutablelistMutableCopy);</span><br><span class="line">NSLog(@&quot;\n====被拷贝对象的引用计数:%ld&quot;,CFGetRetainCount((__bridge CFTypeRef)list));</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -459,7 +459,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/20/Block的开发和理解/" rel="prev" title="block的开发和理解">
+              <a href="/2019/01/21/浅谈Block的认识与理解/" rel="prev" title="block的开发和理解">
                 block的开发和理解 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -643,7 +643,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">13.3k</span>
+    <span title="Site words total count">16.7k</span>
   
 </div>
 
