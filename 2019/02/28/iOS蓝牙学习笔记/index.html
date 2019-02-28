@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="iOS开发,">
+  <meta name="keywords" content="iOS,">
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="前言一直以来都想写博客的，做总结的。但是一直因为各种各样的事拖着，也算是用这个总结立一个flag。 APP项目开发完成之后，期待审核上线，但是很多APP都过不了这一关，针对APP审核不通过常遇问题，苹果在开发者平台将导致软件审核被拒绝的十个原因，最主要的几项是有Bug、连接失败、描述不准、存在误导用户等。 本篇持续更新～当然总结呗，肯定是实际开发遇到的，作为一枚码畜的话，也不想被苹果拒绝。 正文问">
-<meta name="keywords" content="iOS开发">
+<meta name="description" content="前言在最近的面试中，有被遇到问过关于蓝牙的开发，之前的开发过程中，倒是留意过这方面的知识，没有进入过实操，所以记忆不是很深刻。特此整理依法，以备不时之需。 正文 蓝牙是一种无限计数标准，可实现固定设备、移动设备和楼宇个人域网之间的短距离数据交换。  大白话就是蓝牙是一种短距离无线通信技术。 关键词说明中心设备: 用来扫描周围蓝牙硬件的设备。 外部: 被扫描的设备。 广播: 外设不停的散播蓝牙信号，">
+<meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="App Store审核被拒原因小结">
-<meta property="og:url" content="http://yoursite.com/2019/01/01/App-Store审核被拒原因小结/index.html">
+<meta property="og:title" content="iOS蓝牙学习笔记">
+<meta property="og:url" content="http://yoursite.com/2019/02/28/iOS蓝牙学习笔记/index.html">
 <meta property="og:site_name" content="Katy 裴">
-<meta property="og:description" content="前言一直以来都想写博客的，做总结的。但是一直因为各种各样的事拖着，也算是用这个总结立一个flag。 APP项目开发完成之后，期待审核上线，但是很多APP都过不了这一关，针对APP审核不通过常遇问题，苹果在开发者平台将导致软件审核被拒绝的十个原因，最主要的几项是有Bug、连接失败、描述不准、存在误导用户等。 本篇持续更新～当然总结呗，肯定是实际开发遇到的，作为一枚码畜的话，也不想被苹果拒绝。 正文问">
+<meta property="og:description" content="前言在最近的面试中，有被遇到问过关于蓝牙的开发，之前的开发过程中，倒是留意过这方面的知识，没有进入过实操，所以记忆不是很深刻。特此整理依法，以备不时之需。 正文 蓝牙是一种无限计数标准，可实现固定设备、移动设备和楼宇个人域网之间的短距离数据交换。  大白话就是蓝牙是一种短距离无线通信技术。 关键词说明中心设备: 用来扫描周围蓝牙硬件的设备。 外部: 被扫描的设备。 广播: 外设不停的散播蓝牙信号，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-01T03:25:42.000Z">
+<meta property="og:image" content="http://yoursite.com/2019/02/28/iOS蓝牙学习笔记/CoreBluetooth.jpg">
+<meta property="og:updated_time" content="2019-02-28T06:57:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="App Store审核被拒原因小结">
-<meta name="twitter:description" content="前言一直以来都想写博客的，做总结的。但是一直因为各种各样的事拖着，也算是用这个总结立一个flag。 APP项目开发完成之后，期待审核上线，但是很多APP都过不了这一关，针对APP审核不通过常遇问题，苹果在开发者平台将导致软件审核被拒绝的十个原因，最主要的几项是有Bug、连接失败、描述不准、存在误导用户等。 本篇持续更新～当然总结呗，肯定是实际开发遇到的，作为一枚码畜的话，也不想被苹果拒绝。 正文问">
+<meta name="twitter:title" content="iOS蓝牙学习笔记">
+<meta name="twitter:description" content="前言在最近的面试中，有被遇到问过关于蓝牙的开发，之前的开发过程中，倒是留意过这方面的知识，没有进入过实操，所以记忆不是很深刻。特此整理依法，以备不时之需。 正文 蓝牙是一种无限计数标准，可实现固定设备、移动设备和楼宇个人域网之间的短距离数据交换。  大白话就是蓝牙是一种短距离无线通信技术。 关键词说明中心设备: 用来扫描周围蓝牙硬件的设备。 外部: 被扫描的设备。 广播: 外设不停的散播蓝牙信号，">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/28/iOS蓝牙学习笔记/CoreBluetooth.jpg">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/01/App-Store审核被拒原因小结/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/28/iOS蓝牙学习笔记/">
 
 
 
 
 
-  <title>App Store审核被拒原因小结 | Katy 裴</title>
+  <title>iOS蓝牙学习笔记 | Katy 裴</title>
   
 
 
@@ -263,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/01/App-Store审核被拒原因小结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/28/iOS蓝牙学习笔记/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kity Pei">
@@ -280,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">App Store审核被拒原因小结</h1>
+          <h1 class="post-title" itemprop="name headline">iOS蓝牙学习笔记</h1>
         
 
         <div class="post-meta">
@@ -292,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-01T11:25:42+08:00">
-                2019-01-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-28T14:57:22+08:00">
+                2019-02-28
               </time>
             
 
@@ -317,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/错误记录/" itemprop="url" rel="index">
-                    <span itemprop="name">错误记录</span>
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
                   </a>
                 </span>
 
@@ -353,7 +355,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  653 字
+                  1k 字
                 </span>
               
 
@@ -378,98 +380,61 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一直以来都想写博客的，做总结的。但是一直因为各种各样的事拖着，也算是用这个总结立一个flag。</p>
-<p>APP项目开发完成之后，期待审核上线，但是很多APP都过不了这一关，针对APP审核不通过常遇问题，苹果在开发者平台将导致软件审核被拒绝的十个原因，最主要的几项是有Bug、连接失败、描述不准、存在误导用户等。</p>
-<p><strong>本篇持续更新～</strong>当然总结呗，肯定是实际开发遇到的，作为一枚码畜的话，也不想被苹果拒绝。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h3><h4 id="被拒原因"><a href="#被拒原因" class="headerlink" title="被拒原因"></a>被拒原因</h4><p><strong>Guideline 5.1.1 - Legal - Privacy - Data Collection and Storage</strong></p>
-<p>We noticed that your app requests the user’s consent to access their location but does not clarify the use of this feature in the permission modal alert.</p>
-<p><strong>Guideline 5.1.5 - Legal - Privacy - Location Services</strong></p>
-<p>Your app uses location data for features that are not relevant to location. </p>
-<h4 id="被拒原因分析"><a href="#被拒原因分析" class="headerlink" title="被拒原因分析"></a>被拒原因分析</h4><p><strong><em>定位使用场景提示文本不够明确，需提示用户为何打开此功能</em></strong><br><strong><em>定位使用场景提示文本不够明确，需提示用户为何打开此功能</em></strong><br><strong><em>定位使用场景提示文本不够明确，需提示用户为何打开此功能</em></strong></p>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>iOS 10发布以来，苹果公司为了用户的信息安全，在访问内部应用都加入了隐私权限设置，让用户来选择是否使用。如果在开发中不对这些权限进行设置的话造成crash。</p>
-<p><strong><em>根据实际需求场景写提示文本，提示文本不明确会被苹果拒绝的</em></strong></p>
-<table>
-<thead>
-<tr>
-<th>权限</th>
-<th style="text-align:center">info.plist中key</th>
-<th style="text-align:center">info.plist中Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>相册</td>
-<td style="text-align:center">NSPhotoLibraryUsageDescription</td>
-<td style="text-align:center">是否允许此app使用相册?</td>
-</tr>
-<tr>
-<td>相机</td>
-<td style="text-align:center">NSCameraUsageDescription</td>
-<td style="text-align:center">是否允许此app使用相机?</td>
-</tr>
-<tr>
-<td>麦克风</td>
-<td style="text-align:center">NSMicrophoneUsageDescription</td>
-<td style="text-align:center">是否允许此app使用麦克风?</td>
-</tr>
-<tr>
-<td>位置</td>
-<td style="text-align:center">NSLocationUsageDescription</td>
-<td style="text-align:center">是否允许此app使用位置？</td>
-</tr>
-<tr>
-<td>在使用期间访问位置</td>
-<td style="text-align:center">NSLocationWhenInUseUsageDescription</td>
-<td style="text-align:center">是否允许此app在使用期间访问位置?</td>
-</tr>
-<tr>
-<td>始终访问位置</td>
-<td style="text-align:center">NSLocationAlwaysUsageDescription</td>
-<td style="text-align:center">是否允许此app始终访问位置？</td>
-</tr>
-<tr>
-<td>日历</td>
-<td style="text-align:center">NSCalendarsUsageDescription</td>
-<td style="text-align:center">是否允许此app使用日历?</td>
-</tr>
-<tr>
-<td>提醒事项</td>
-<td style="text-align:center">NSRemindersUsageDescription</td>
-<td style="text-align:center">是否允许此app使用提醒事项?</td>
-</tr>
-<tr>
-<td>运动与健身</td>
-<td style="text-align:center">NSMotionUsageDescription</td>
-<td style="text-align:center">是否允许此app使用运动与健身?</td>
-</tr>
-<tr>
-<td>健康更新</td>
-<td style="text-align:center">NSHealthUpdateUsageDescription</td>
-<td style="text-align:center">是否允许此app使用健康更新?</td>
-</tr>
-<tr>
-<td>健康分享</td>
-<td style="text-align:center">NSHealthShareUsageDescription</td>
-<td style="text-align:center">是否允许此app使用健康分享?</td>
-</tr>
-<tr>
-<td>蓝牙</td>
-<td style="text-align:center">NSBluetoothPeripheralUsageDescription</td>
-<td style="text-align:center">是否允许此app使用蓝牙?</td>
-</tr>
-<tr>
-<td>媒体资料库</td>
-<td style="text-align:center">NSAppleMusicUsageDescription</td>
-<td style="text-align:center">是否允许此app使用媒体资料库?</td>
-</tr>
-<tr>
-<td>语音识别</td>
-<td style="text-align:center">NSSpeechRecognitionUsageDescription</td>
-<td style="text-align:center">是否允许此app使用语音识别?</td>
-</tr>
-</tbody>
-</table>
-
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在最近的面试中，有被遇到问过关于蓝牙的开发，之前的开发过程中，倒是留意过这方面的知识，没有进入过实操，所以记忆不是很深刻。特此整理依法，以备不时之需。</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><blockquote>
+<p>蓝牙是一种无限计数标准，可实现固定设备、移动设备和楼宇个人域网之间的短距离数据交换。</p>
+</blockquote>
+<p>大白话就是蓝牙是一种短距离无线通信技术。</p>
+<h2 id="关键词说明"><a href="#关键词说明" class="headerlink" title="关键词说明"></a>关键词说明</h2><p><strong>中心设备:</strong> 用来扫描周围蓝牙硬件的设备。</p>
+<p><strong>外部:</strong> 被扫描的设备。</p>
+<p><strong>广播:</strong> 外设不停的散播蓝牙信号，让中心设备可以扫描到。</p>
+<p><strong>服务:</strong> 外设广播和运行的时候会有服务，可以理解成一个功能模块，中心设备可以读取服务，外设可以有多个服务。每个服务又包含了很多字段，这些字段的权限一般分为 读<code>read</code>,写<code>write</code>，通知<code>notiy</code>几种，就是我们连接设备后具体需要操作的内容。</p>
+<p><strong>特征:</strong> 在服务中的一个单位，一个服务可以有很多个特征，特征会有一个value,一般读写的数据就是这个value。</p>
+<p><strong>UUID:</strong> 区分不同的服务和特征，可以理解为服务和特征的身份证。</p>
+<h2 id="CoreBluetooth框架"><a href="#CoreBluetooth框架" class="headerlink" title="CoreBluetooth框架"></a><code>CoreBluetooth</code>框架</h2><p>在<code>iOS</code>中主要使用<code>CoreBluetooth</code>框架实现蓝牙的开发。通过<code>CoreBluetooth</code>可以轻松实现外设或中心设备的开发。</p>
+<p><code>CoreBluetooth</code>框架可以分为两个模块:中心设备(peripheral)，外设(central)，它们都各有一套<code>API</code>提供给开发者使用。</p>
+<p><img src="/2019/02/28/iOS蓝牙学习笔记/CoreBluetooth.jpg" alt="CoreBluetooth"></p>
+<p>上图的左侧是中心设备开发相关的类，我们的一些相关操作是依靠<code>CBCentralManager</code>来进行的。</p>
+<ul>
+<li><strong><code>CBCentralManager</code>:</strong> 蓝牙中心设备管理类，用来统一调度中心设备的开发。</li>
+<li><strong><code>CBPeripheral</code>:</strong> 蓝牙外设</li>
+<li><strong><code>CBService</code>:</strong> 蓝牙外设的服务，可以又0个或者多个服务</li>
+<li><strong><code>CBCharacteristic</code>:</strong> 服务中的特征，每一个蓝牙服务中可以又0个或多个特征，特征中包含数据信息。</li>
+<li><strong><code>CBUUID</code>:</strong> 可以理解为服务或特征的身份证，可以用来选择需要的服务和特征。</li>
+</ul>
+<p>上图中右侧是外设开发相关的类</p>
+<ul>
+<li><strong><code>CBPeripheralManager</code>:</strong> 用于开发蓝牙外设的中心管理类</li>
+<li><strong><code>CBCentral</code>:</strong> 蓝牙中心设备</li>
+<li><strong><code>CBMutableService</code>:</strong> 外设开发的时候可以添加多个服务，所以这里用<code>CBMutableService</code>来创建添加服务</li>
+<li><strong><code>CBMutableCharacteristic</code>:</strong> 每个服务中可以有多个特征，外设开发给服务添加特征的时候使用这个类</li>
+<li><strong><code>CBATTRequest</code>:</strong> 读或者写请求，它的实例对象有一个value属性，用来装在外设进行蓝牙读取或写入请求时的数据。一般在外设写入或读取的回调方法中有这样一个参数。</li>
+</ul>
+<h2 id="蓝牙设备的状态"><a href="#蓝牙设备的状态" class="headerlink" title="蓝牙设备的状态"></a>蓝牙设备的状态</h2><ol>
+<li>待机状态(standby)</li>
+<li>广播状态(advertising)</li>
+<li>扫描状态(Scanning)</li>
+<li>发起连接状态(Initiating)</li>
+<li>已连接(Connected)</li>
+</ol>
+<h2 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h2><h3 id="蓝牙中心模式流程"><a href="#蓝牙中心模式流程" class="headerlink" title="蓝牙中心模式流程"></a>蓝牙中心模式流程</h3><ol>
+<li>建立中心角色</li>
+<li>扫描外设</li>
+<li>连接外设</li>
+<li>扫描外设中的服务和特征<br>4.1 获取外设的services<br>4.2 获取外设的特征，获取特征中的值，以及特征值的描述</li>
+<li>与外设做数据交互</li>
+<li>订阅特征的通知</li>
+<li>断开连接</li>
+</ol>
+<h3 id="蓝牙外设模式流程"><a href="#蓝牙外设模式流程" class="headerlink" title="蓝牙外设模式流程"></a>蓝牙外设模式流程</h3><ol>
+<li>启动一个Peripheral管理对象；</li>
+<li>本地Peripheral设置服务，特性，描述，权限等等；</li>
+<li>Peripheral发送广告；</li>
+<li>设置处理订阅、取消订阅、读特征、写特征的委托方法。</li>
+</ol>
+<h2 id="蓝牙第三库"><a href="#蓝牙第三库" class="headerlink" title="蓝牙第三库"></a>蓝牙第三库</h2><p>再查阅各种资料学习蓝牙的时候，突然发现了在<code>git</code>上一个很好的第三方库，(BabyBluetooth)[<a href="https://github.com/coolnameismy/BabyBluetooth]。值得去学习一下。" target="_blank" rel="noopener">https://github.com/coolnameismy/BabyBluetooth]。值得去学习一下。</a></p>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><code>BabyBluetooth</code>是一个基于<code>CoreBluetooth</code>框架封装的轻量级的开源库，可以很方便的使开发者使用<code>CoreBluetooth</code>,同时它使用<code>Block</code>替代了<code>CoreBluetooth</code>的代理，减少了蓝牙开发过程中的代码量，同时它支持蓝牙设备中心模式和外设模式。</p>
+<h3 id="源码解读"><a href="#源码解读" class="headerlink" title="源码解读"></a>源码解读</h3>
       
     </div>
     
@@ -486,7 +451,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/iOS开发/" rel="tag"># iOS开发</a>
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
           
         </div>
       
@@ -499,8 +464,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/06/iOS权限设置/" rel="next" title="iOS 权限设置">
-                <i class="fa fa-chevron-left"></i> iOS 权限设置
+              <a href="/2019/02/22/iOS面试题总结/" rel="next" title="iOS面试题总结">
+                <i class="fa fa-chevron-left"></i> iOS面试题总结
               </a>
             
           </div>
@@ -508,10 +473,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/05/iOS学习笔记之UICollectionView小结/" rel="prev" title="iOS学习笔记之UICollectionView小结">
-                iOS学习笔记之UICollectionView小结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -659,7 +620,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题一"><span class="nav-number">2.1.</span> <span class="nav-text">问题一</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#被拒原因"><span class="nav-number">2.1.1.</span> <span class="nav-text">被拒原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#被拒原因分析"><span class="nav-number">2.1.2.</span> <span class="nav-text">被拒原因分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">2.1.3.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词说明"><span class="nav-number">2.1.</span> <span class="nav-text">关键词说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CoreBluetooth框架"><span class="nav-number">2.2.</span> <span class="nav-text">CoreBluetooth框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#蓝牙设备的状态"><span class="nav-number">2.3.</span> <span class="nav-text">蓝牙设备的状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发流程"><span class="nav-number">2.4.</span> <span class="nav-text">开发流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#蓝牙中心模式流程"><span class="nav-number">2.4.1.</span> <span class="nav-text">蓝牙中心模式流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#蓝牙外设模式流程"><span class="nav-number">2.4.2.</span> <span class="nav-text">蓝牙外设模式流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#蓝牙第三库"><span class="nav-number">2.5.</span> <span class="nav-text">蓝牙第三库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">2.5.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码解读"><span class="nav-number">2.5.2.</span> <span class="nav-text">源码解读</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
